@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const crypto = require("crypto");
-const { v1: uuidv1 } = require('uuid');
+const uuidv1 = require("uuid/v1");
 
 const userSchema = new mongoose.Schema(
     {
@@ -68,4 +68,3 @@ userSchema.methods = {
 };
 
 module.exports = mongoose.model("User", userSchema);
-
